@@ -11,4 +11,9 @@ public class Pocisk {
         this.y = y;
         this.predkoscPocisku = przedkoscPocisku;
     }
+
+    public void remove() {
+        x=-100;
+        y=-100;
+    }
 }

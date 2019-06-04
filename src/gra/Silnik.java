@@ -13,6 +13,7 @@ import java.util.Random;
 public class Silnik extends JPanel implements ActionListener, KeyListener {
 
     private Image image, imageStatek, imageStatekPrzeciwnik, imageStatekPrzeciwnikStrzal, imageStatekPrzeciwnikRuch;
+    private ImageIcon imageWybuch;
 
     private static Font monoFont;
     private static Font tekstFont;
@@ -20,14 +21,16 @@ public class Silnik extends JPanel implements ActionListener, KeyListener {
 
     ArrayList<PrzeciwnikPodstawowy> przeciwnicy;
     ArrayList<Pocisk> pociski, pociskiPrzeciwnikow;
-    ArrayList<>
+    ArrayList<Wybuch> wybuchy;
 
     Random generator;
 
     Timer timer;
 
     int xgracza = 0, ygracza = 330, velx = 0, odliczanie = 0, poziomTrudnosci = 1, zycia = 3, punkty = 0;
-    Rectangle r1,r2;
+    Rectangle r1, r2;
+
+
 
     public Silnik(int poziomTrudnosci) {
 
@@ -44,6 +47,7 @@ public class Silnik extends JPanel implements ActionListener, KeyListener {
         pociski = new ArrayList<>();
         pociskiPrzeciwnikow = new ArrayList<>();
         przeciwnicy = new ArrayList<>();
+        wybuchy = new ArrayList<>();
 
         this.poziomTrudnosci = poziomTrudnosci;
 
@@ -51,7 +55,6 @@ public class Silnik extends JPanel implements ActionListener, KeyListener {
         timer.start();
         addKeyListener(this);
         setFocusable(true);
-        // setFocusTraversalKeysEnabled(false);
 
 
     }
@@ -62,26 +65,28 @@ public class Silnik extends JPanel implements ActionListener, KeyListener {
         imageStatekPrzeciwnik = new ImageIcon("img\\statekPrzeciwnik.png").getImage();
         imageStatekPrzeciwnikStrzal = new ImageIcon("img\\statekPrzeciwnikStrzal.png").getImage();
         imageStatekPrzeciwnikRuch = new ImageIcon("img\\statekPrzeciwnikRuch.png").getImage();
+        imageWybuch = new ImageIcon("img\\wybuch50.gif");
     }
 
     public void dodajPrzeciwnika() {
         int i = 0;
-        if(odliczanie%(60/poziomTrudnosci)==0){
+        if (odliczanie % (80 / poziomTrudnosci) == 0) {
 
             i = generator.nextInt(550) + 1;
+
             przeciwnicy.add(new PrzeciwnikPodstawowy(i, -100, 30, 30, 1));
             odliczanie++;
 
-        } else if (odliczanie == 126 / poziomTrudnosci) {
+        } else if (odliczanie % (100 / poziomTrudnosci) == 0) {
             i = generator.nextInt(550) + 1;
 
             przeciwnicy.add(new PrzeciwnikRuch(i, -100, 30, 30, 1, 130, 1));
             odliczanie++;
-        } else if (odliczanie == 300 / poziomTrudnosci) {
+        } else if (odliczanie % (150 / poziomTrudnosci) == 0) {
 
             i = generator.nextInt(550) + 1;
-
             przeciwnicy.add(new PrzeciwnikStrzal(i, -100, 30, 30, 1, 100 / poziomTrudnosci));
+
             odliczanie++;
         } else if (odliczanie >= 303 / poziomTrudnosci) {
             odliczanie = 0;
@@ -109,7 +114,9 @@ public class Silnik extends JPanel implements ActionListener, KeyListener {
             while (d.hasNext()) {
                 Pocisk e = d.next();
                 if ((s.y <= e.y) && (s.x >= e.x) && s.x <= e.x + 5) {
+                    wybuchy.add(new Wybuch(s.x,s.y,20));
                     d.remove();
+                    s.remove();
                 }
 
             }
@@ -149,6 +156,16 @@ public class Silnik extends JPanel implements ActionListener, KeyListener {
         }
     }
 
+    public void analizaWybuchow() {
+        Iterator<Wybuch> i = wybuchy.iterator();
+        while (i.hasNext()) {
+            Wybuch s = i.next();
+            s.odliczanie();
+            if (s.czasTrwania < 0)
+                i.remove();
+        }
+    }
+
     public void analizaKolizjiPrzeciwnikow() {
 
 
@@ -157,9 +174,11 @@ public class Silnik extends JPanel implements ActionListener, KeyListener {
             PrzeciwnikPodstawowy s = i.next();
             for (Pocisk object : pociski) {
                 if ((object.x >= s.x - 8) && (object.x <= (s.x + s.szerokosc + 1) && (object.y <= s.y + s.wysokosc))) {
-
+                    wybuchy.add(new Wybuch(object.x, object.y, 30));
                     i.remove();
+                    object.remove();
                     punkty += poziomTrudnosci;
+
                 }
 
             }
@@ -167,24 +186,26 @@ public class Silnik extends JPanel implements ActionListener, KeyListener {
     }
 
     public void analizaKolizjiGracza() {
-        
+
         Iterator<Pocisk> i = pociskiPrzeciwnikow.iterator();
         while (i.hasNext()) {
             Pocisk s = i.next();
             if ((s.x >= xgracza) && (s.x <= (xgracza + 40) && (s.y >= ygracza))) {
+                wybuchy.add(new Wybuch(s.x , s.y , 30));
                 zycia--;
                 i.remove();
             }
         }
         Iterator<PrzeciwnikPodstawowy> t = przeciwnicy.iterator();
         while (t.hasNext()) {
-             PrzeciwnikPodstawowy d = t.next();
-             r1 = new Rectangle(d.x,d.y,d.szerokosc,d.wysokosc);
-             r2 = new Rectangle(xgracza,ygracza,40,30);
-            if(r1.intersects(r2))
-            {
+            PrzeciwnikPodstawowy d = t.next();
+            r1 = new Rectangle(d.x, d.y, d.szerokosc, d.wysokosc);
+            r2 = new Rectangle(xgracza, ygracza, 40, 30);
+            if (r1.intersects(r2)) {
                 zycia--;
+                wybuchy.add(new Wybuch(d.x + 25, d.y + 25, 30));
                 t.remove();
+
             }
         }
 
@@ -193,8 +214,8 @@ public class Silnik extends JPanel implements ActionListener, KeyListener {
     public void akcjePrzeciwnikow() {
         for (PrzeciwnikPodstawowy object : przeciwnicy) {
             object.akcja();
-            if ((object instanceof PrzeciwnikStrzal)&&((PrzeciwnikStrzal) object).strzal) {
-                    pociskiPrzeciwnikow.add(new Pocisk(object.x + 12, object.y, 2));
+            if ((object instanceof PrzeciwnikStrzal) && ((PrzeciwnikStrzal) object).strzal) {
+                pociskiPrzeciwnikow.add(new Pocisk(object.x + 12, object.y, 2));
             }
         }
     }
@@ -206,6 +227,7 @@ public class Silnik extends JPanel implements ActionListener, KeyListener {
         ruchPociskow();
         analizaPociskow();
         analizaKolizjiPrzeciwnikow();
+        analizaWybuchow();
         akcjePrzeciwnikow();
         analizaPociskowPrzeciwnikow();
         analizaKolizjiGracza();
@@ -213,11 +235,6 @@ public class Silnik extends JPanel implements ActionListener, KeyListener {
 
     }
 
-
-    public void actionPerformed(ActionEvent e) {
-        analiza();
-        repaint();
-    }
 
     private void analizaPolozeniaGracza() {
 
@@ -236,6 +253,7 @@ public class Silnik extends JPanel implements ActionListener, KeyListener {
 
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode();
+
         if (code == KeyEvent.VK_LEFT) {
             velx = -5;
         }
@@ -259,15 +277,20 @@ public class Silnik extends JPanel implements ActionListener, KeyListener {
 
     }
 
+    public void actionPerformed(ActionEvent e) {
+        analiza();
+        repaint();
+    }
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.drawImage(image, 0, 0, 580, 370, null);
-        
-        if (zycia > 0) {
+
+        if (zycia >= 0) {
             rysujPrzeciwnikow(g);
             rysujPociski(g);
             rysujStatekGracza(g);
+            rysujWybuchy(g);
             rysujPunkty(g);
             rysujZycia(g);
 
@@ -280,7 +303,6 @@ public class Silnik extends JPanel implements ActionListener, KeyListener {
     private void rysujPrzegrana(Graphics g) {
         g.setFont(monoFont);
         FontMetrics fm = g.getFontMetrics();
-
         g.setColor(Color.WHITE);
         g.drawString("PRZEGRALES", 170, 200);
         g.drawString("wcisnij powrot do menu", 50, 300);
@@ -325,6 +347,12 @@ public class Silnik extends JPanel implements ActionListener, KeyListener {
             } else {
                 g.drawImage(imageStatekPrzeciwnik, object.x, object.y, object.szerokosc, object.wysokosc, null);
             }
+        }
+    }
+
+    private void rysujWybuchy(Graphics g) {
+        for (Wybuch object : wybuchy) {
+            imageWybuch.paintIcon(this, g, object.x - 25, object.y - 25);
         }
     }
 
