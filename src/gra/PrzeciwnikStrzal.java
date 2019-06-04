@@ -1,10 +1,10 @@
 package gra;
 
-public class przeciwnikStrzal extends przeciwnik {
+public class PrzeciwnikStrzal extends PrzeciwnikPodstawowy {
     int check, czestotliwoscStrzalu;
     boolean strzal;
 
-    public przeciwnikStrzal(int x, int y, int szerokosc, int wysokosc, int predkoscRuchu, int czestotliwoscStrzalu) {
+    public PrzeciwnikStrzal(int x, int y, int szerokosc, int wysokosc, int predkoscRuchu, int czestotliwoscStrzalu) {
         super(x, y, szerokosc, wysokosc, predkoscRuchu);
         this.czestotliwoscStrzalu = czestotliwoscStrzalu;
         this.strzal = true;

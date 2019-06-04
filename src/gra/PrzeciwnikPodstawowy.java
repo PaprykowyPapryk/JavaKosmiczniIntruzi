@@ -1,12 +1,12 @@
 package gra;
 
-public class przeciwnik {
+public class PrzeciwnikPodstawowy {
 
     int x = 0, y = 0, szerokosc = 0, wysokosc = 0,predkoscRuchu=0;
 
 
 
-    public przeciwnik(int x, int y, int szerokosc, int wysokosc,int predkoscRuchu)
+    public PrzeciwnikPodstawowy(int x, int y, int szerokosc, int wysokosc, int predkoscRuchu)
     {
         this.x=x;
         this.y=y;

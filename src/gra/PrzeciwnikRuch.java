@@ -1,13 +1,12 @@
 package gra;
 
-public class przeciwnikRuch extends przeciwnik {
+public class PrzeciwnikRuch extends PrzeciwnikPodstawowy {
 
     int zakresRuchu, xRuchu, predkoscRuchuPoprzek;
     boolean flagaRuchu;
 
-    //zalozenie w prawo idzie poprawnie
 
-    public przeciwnikRuch(int x, int y, int szerokosc, int wysokosc, int predkoscRuchu, int zakresRuchu, int predkoscRuchuPoprzek) {
+    public PrzeciwnikRuch(int x, int y, int szerokosc, int wysokosc, int predkoscRuchu, int zakresRuchu, int predkoscRuchuPoprzek) {
 
         super(x, y, szerokosc, wysokosc, predkoscRuchu);
         this.zakresRuchu = zakresRuchu;

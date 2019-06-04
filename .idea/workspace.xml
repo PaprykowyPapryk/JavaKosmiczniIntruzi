@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36b09c19-c7cb-4149-8431-f02b246679e4" name="Default Changelist" comment="" />
+    <list default="true" id="36b09c19-c7cb-4149-8431-f02b246679e4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gra/Wybuch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gra/gra/game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gra/gra/pocisk.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gra/gra/pocisk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gra/gra/przeciwnik.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gra/gra/przeciwnikRuch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gra/gra/przeciwnikRuch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gra/gra/przeciwnikStrzal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gra/gra/przeciwnikStrzal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/gra/gra/silnik.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/gra/gra/silnik.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gra/game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gra/Gra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gra/pocisk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gra/Pocisk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gra/przeciwnik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gra/PrzeciwnikPodstawowy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gra/przeciwnikRuch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gra/PrzeciwnikRuch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gra/przeciwnikStrzal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gra/PrzeciwnikStrzal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gra/silnik.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gra/Silnik.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,74 +29,38 @@
     <SUITE FILE_PATH="coverage/gra$game.ic" NAME="game Coverage Results" MODIFIED="1538054867403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gra/silnik.java">
+        <entry file="file://$PROJECT_DIR$/src/gra/Silnik.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2363">
-              <caret line="208" column="31" selection-start-line="208" selection-start-column="31" selection-end-line="208" selection-end-column="31" />
+            <state relative-caret-position="170">
+              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1482#1923#0" />
+                <element signature="e#1939#2932#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gra/przeciwnik.java">
+        <entry file="file://$PROJECT_DIR$/src/gra/Pocisk.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gra/przeciwnikStrzal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+            <state relative-caret-position="68">
+              <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="5" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/gra/game.java">
+        <entry file="file://$PROJECT_DIR$/src/gra/Wybuch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-387">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#keyTyped#0;class#game#0" />
-                <element signature="method#keyPressed#0;class#game#0" />
-                <element signature="method#keyReleased#0;class#game#0" />
-                <element signature="method#actionPerformed#0;class#game#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gra/przeciwnikRuch.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gra/pocisk.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="method#pocisk#0;class#pocisk#0" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -98,8 +78,18 @@
     <findStrings>
       <find>repaint</find>
       <find>3</find>
+      <find>przeciwnicyszablony</find>
+      <find>przeciwnicy</find>
+      <find>dodajPrzeciwnika</find>
+      <find>analiza</find>
+      <find>t</find>
+      <find>start</find>
+      <find>ActionEvent</find>
       <find>zycia</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -107,24 +97,27 @@
         <option value="$PROJECT_DIR$/src/silnik.java" />
         <option value="$PROJECT_DIR$/src/przeciwnik.java" />
         <option value="$PROJECT_DIR$/src/gra/przeciwnikStrzal.java" />
-        <option value="$PROJECT_DIR$/src/gra/przeciwnik.java" />
-        <option value="$PROJECT_DIR$/src/gra/przeciwnikRuch.java" />
         <option value="$PROJECT_DIR$/src/gra/pocisk.java" />
+        <option value="$PROJECT_DIR$/src/gra/przeciwnikRuch.java" />
+        <option value="$PROJECT_DIR$/src/gra/przeciwnik.java" />
         <option value="$PROJECT_DIR$/src/gra/silnik.java" />
         <option value="$PROJECT_DIR$/src/gra/game.java" />
+        <option value="$PROJECT_DIR$/src/gra/Silnik.java" />
+        <option value="$PROJECT_DIR$/src/gra/Wybuch.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-10" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,7 +146,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -165,6 +157,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -179,8 +172,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gra.game" />
+    <configuration name="Gra" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gra.Gra" />
       <module name="gra" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -188,7 +181,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.game" />
+        <item itemvalue="Application.Gra" />
       </list>
     </recent_temporary>
   </component>
@@ -203,38 +196,40 @@
       <option name="presentableId" value="Default" />
       <updated>1537899223059</updated>
       <workItem from="1558033326703" duration="1843000" />
+      <workItem from="1558429129544" duration="18000" />
+      <workItem from="1559110691502" duration="1162000" />
+      <workItem from="1559123636329" duration="1996000" />
+      <workItem from="1559489934321" duration="6087000" />
+      <workItem from="1559578464731" duration="993000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1843000" />
+    <option name="totallyTimeSpent" value="12099000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info id="UI Designer" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.36174497" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.38322148" />
       <window_info id="Structure" order="1" sideWeight="0.502008" side_tool="true" weight="0.25578406" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39892185" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32884097" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5013423" side_tool="true" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32884097" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49932885" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -243,6 +238,9 @@
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="right" id="Coverage" order="7" side_tool="true" weight="0.32969153" />
+      <window_info anchor="right" id="Maven" order="8" />
+      <window_info anchor="right" id="Palette" order="9" />
+      <window_info anchor="right" id="Database" order="10" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.25899744" />
@@ -276,61 +274,71 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/function/Predicate.java" />
-    <entry file="file://$PROJECT_DIR$/src/gra/przeciwnikStrzal.java">
+    <entry file="file://$PROJECT_DIR$/src/gra/img/kosmos.jpg" />
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        <state relative-caret-position="148">
+          <caret line="792" column="19" selection-start-line="792" selection-start-column="19" selection-end-line="792" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gra/pocisk.java">
+    <entry file="file://$PROJECT_DIR$/src/gra/PrzeciwnikRuch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="method#pocisk#0;class#pocisk#0" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gra/przeciwnikRuch.java">
+    <entry file="file://$PROJECT_DIR$/src/gra/PrzeciwnikStrzal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        <state relative-caret-position="-47">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gra/przeciwnik.java">
+    <entry file="file://$PROJECT_DIR$/src/gra/Gra.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gra/img/kosmos.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gra/silnik.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2363">
-          <caret line="208" column="31" selection-start-line="208" selection-start-column="31" selection-end-line="208" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gra/game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-387">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="1768">
+          <caret line="176" column="30" selection-start-line="176" selection-start-column="30" selection-end-line="176" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#keyTyped#0;class#game#0" />
-            <element signature="method#keyPressed#0;class#game#0" />
             <element signature="method#keyReleased#0;class#game#0" />
             <element signature="method#actionPerformed#0;class#game#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gra/PrzeciwnikPodstawowy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gra/Silnik.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1482#1923#0" />
+            <element signature="e#1939#2932#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gra/Pocisk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gra/Wybuch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>

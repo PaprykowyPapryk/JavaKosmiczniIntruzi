@@ -8,12 +8,9 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 
-public class game extends JPanel implements ActionListener, KeyListener {
-    static boolean flagaStart = true;
-    private static Font monoFont = new Font("Monospaced", Font.BOLD
-            | Font.ITALIC, 36);
+public class Gra extends JPanel implements ActionListener, KeyListener {
     static int poziomTrudnosci = 1;
-    static silnik s;
+    static Silnik s;
 
     public static void main(String arge[]) {
 
@@ -24,7 +21,8 @@ public class game extends JPanel implements ActionListener, KeyListener {
         f.setIconImage(imageL);
         f.setTitle("Kosmiczni Intruzi by Patryk Zasada");
         f.setFocusTraversalKeysEnabled(false);
-        s = new silnik(poziomTrudnosci);
+
+        s = new Silnik(poziomTrudnosci);
 
 
         JButton kontynuujButton = new JButton("Kontynuuj");
@@ -61,6 +59,9 @@ public class game extends JPanel implements ActionListener, KeyListener {
         label3.setHorizontalTextPosition(JLabel.LEFT);
         label3.setFont(new Font("Monospaced", Font.BOLD
                 | Font.ITALIC, 10));
+
+
+
         JPanel panel = new JPanel();
         panel.add(label3, BorderLayout.NORTH);
         panel.add(label1, BorderLayout.NORTH);
@@ -74,8 +75,6 @@ public class game extends JPanel implements ActionListener, KeyListener {
         JRadioButton sredniButton = new JRadioButton("Sredni");
         JRadioButton trudnyButton = new JRadioButton("trudny");
         ButtonGroup group = new ButtonGroup();
-
-
         group.add(latwyButton);
         group.add(sredniButton);
         group.add(trudnyButton);
@@ -110,7 +109,6 @@ public class game extends JPanel implements ActionListener, KeyListener {
             kontynuujButton.setEnabled(false);
         });
 
-
         kontynuujButton.addActionListener(e -> {
 
 
@@ -135,7 +133,7 @@ public class game extends JPanel implements ActionListener, KeyListener {
             f.getContentPane().removeAll();
 
 
-            s = new silnik(poziomTrudnosci);
+            s = new Silnik(poziomTrudnosci);
             f.add(s);
             powrotButton.setLayout(null);
             powrotButton.setPreferredSize(new Dimension(30, 30));
@@ -176,6 +174,7 @@ public class game extends JPanel implements ActionListener, KeyListener {
         });
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setSize(600, 440);
+        f.setResizable(false);
         f.setVisible(true);
 
         f.add(panel);
@@ -190,6 +189,7 @@ public class game extends JPanel implements ActionListener, KeyListener {
 
 
     @Override
+
     public void keyTyped(KeyEvent e) {
 
     }
